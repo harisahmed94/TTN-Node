@@ -10,9 +10,9 @@ import time
 lora = LoRa(mode=LoRa.LORAWAN)
 
 # create an ABP authentication params
-dev_addr = struct.unpack(">l", ubinascii.unhexlify('26011D7A'))[0]
-nwk_swkey = ubinascii.unhexlify('E10124C8FDC77519CBF1ED4BE674E693')
-app_swkey = ubinascii.unhexlify('90FC58380F5757EA60082B43CA2F34BB')
+dev_addr = struct.unpack(">l", ubinascii.unhexlify('PASTE YOUR DEVICE ADDRESS KEY HERE'))[0]
+nwk_swkey = ubinascii.unhexlify('PASTE YOUR NETWORK SESSION KEY HERE')
+app_swkey = ubinascii.unhexlify('PASTE YOUR APPLICATION SESSION KEY HERE')
 
 # join a network using ABP (Activation By Personalisation)
 lora.join(activation=LoRa.ABP, auth=(dev_addr, nwk_swkey, app_swkey))
